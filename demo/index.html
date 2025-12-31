@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/*通用設定*/
+*{
+    box-sizing: border-box;
+}
+.container{
+  max-width: 1280px;
+  margin: 0 auto;      
+  padding: 0;     
+}
+body{
+    background-color: black;
+}
+.wrap-header{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.928);
+}
+.wrap-content{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/*頁首設定*/
+
+
+/*主視覺設定*/
+main{
+    position: relative;
+    color: whitesmoke;
+    line-height: 16px;
+    width: 1280px;
+    margin: 0 auto;
+    height: 832px;
+    padding-top:210px;
+    padding-right:50px;;
+    background-image: url(main\ image.png);
+    background-size: cover;
+}
+main h1{
+    text-align: right;
+    font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;
+    font-size: 100px;
+    padding-bottom: 20px;
+}
+main h2{
+    text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:30px;
+    padding-bottom: 20px;
+}
+
+main h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    max-width: 530px;   
+    margin-left: auto;  
+    text-align: left;  
+}
+
+h2{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+/*小卡設定*/
+.card{
+    width: 346px;
+    border-radius: 34px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;              
+    flex-direction: column;     
+}
+
+.card_title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top:24px;
+    font-size: 36px;  
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.card-image{
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-cta{
+    width: 100%;                
+    margin-top: auto;           
+
+    background-color: #b8862b;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-content{
+    padding: 0px 20px 20px 20px;
+    flex: 1;              
+}
+
+
+
+.card-content p{
+    line-height: 150%;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px;
+
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: center; 
+}
+
+.card-intro{
+    font-size: 20px;   
+    line-height: 1.5;  
+}
+
+/*All support按鈕設定*/
+.all-support-bar{
+    width: 100%;
+    max-width: 1280px;
+    margin: 40px 0;
+    transform: translateX(-3px);
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.all-support-text{
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 30px;
+}
+
+/*MEOW MEOW橫幅小卡設定*/
+.meow{
+    position: relative;
+    width: 1280px;
+    height: 500px;
+    margin: 40px 0;
+    background-image: url(LOVEMEHUMAN.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.meow-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    color: white;                
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-text-stroke:4px black; 
+}
+
+.meow-text.left{
+    left: 40px;
+    bottom: 40px;
+}
+
+.meow-text.right{
+    right: 40px;
+    bottom: 40px;
+    font-size: 80px;
+}
+/*頁尾設定*/
+
+</style>
+</head>
+<body>
+<div class="wrap-header">
+ <header>
+  <h3 class="logo"><a href="AJI_project.html">AJi PROJECT</h3>
+  <nav>
+    <ul>
+      <li><a href="">About AJi</a></li>
+      <li><a href="">Photo AJi</a></li>
+      <li><a href="">AJi Shop</a></li>
+      <li><a href="">AJi Club</a></li>
+      <li><a href="">Login</a></li>
+    </ul>
+  </nav>
+  <button class="cta-button"></button>
+ </header>
+</div>
+<div class="wrap-content">
+
+</div>
+
+<div class="container">
+<main>
+    <h1>Sponsor AJi</h1>
+    <h2>“Because even cats have bills to pay”</h2>
+    <h3>Inflation hits everyone — even cats. <br>Join the Aji Sponsorship Program and keep his snacks secure.</h3>
+</main>
+
+<h2>Choose how you want to help AJi today. From full meals to fresh litter and playtime fun, your support keeps him purring. </h2>
+
+<section class="card-list">
+
+  <div class="card">
+    <img src="Card1.png" alt="" class="card-image">
+    <div class="card-content">
+      <h3 class="card_title">Can Support</h3>
+      <p class="card-intro">
+        Donate a can, feed a dream.<br>
+        Because no cat should face an empty bowl.
+      </p>
+    </div>
+    <div class="card-cta">Click to Help</div>
+  </div>
+
+  <div class="card">
+    <img src="Card2.png" alt="" class="card-image">
+    <div class="card-content">
+      <h3 class="card_title">PuPu Support</h3>
+      <p class="card-intro">
+        Keep it clean.<br>
+        Keep it classy. Keep it PuPu.
+      </p>
+    </div>
+    <div class="card-cta" style="background:#6d7b66;">Click to Help</div>
+  </div>
+
+  <div class="card">
+    <img src="Card3.png" alt="" class="card-image">
+    <div class="card-content">
+      <h3 class="card_title">Toy Support</h3>
+      <p class="card-intro">
+        More toys! More joy!<br>
+        More boxes!!!<br>
+        Support Aji’s playtime today..
+      </p>
+    </div>
+    <div class="card-cta" style="background:#b5652a;">Click to Help</div>
+  </div>
+
+</section>
+
+
+<section class="all-support-bar">
+    <div class="all-support-text">
+        All Support for Aji
+    </div>
+</section>
+
+<section class="meow">
+    <div class="meow-text left">
+        Meow Meow!<br>
+        Love me, human.
+    </div>
+
+    <div class="meow-text right">
+        A Ji
+    </div>
+</section>
+</div>
+</body>
+</html>

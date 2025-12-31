@@ -1,0 +1,489 @@
+
+/*通用設定*/
+body, h1, h2, h3, h4 ,p{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: black;
+}
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;      
+  padding: 0;     
+}
+
+/*頁首設定*/
+.wrap-header{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.777);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.wrap-content{
+    width: 1280px;
+    margin: 0 auto;
+}
+header{
+  width: 1280px;
+  margin: 0 auto;
+  padding: 14px 24px;
+
+  display: flex;
+  align-items: center;            /* 讓 logo/nav/login 垂直對齊 */
+  justify-content: space-between; /* 左中右分配 */
+  gap: 16px;
+}
+
+/* LOGO 位置：固定在左邊 */
+.logo{
+  margin-right: auto;
+  font-size: 45px;
+}
+
+/* 你的 logo-link（保留，但補上尺寸感） */
+.logo-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+.logo-link:hover{
+    color: rgba(175, 221, 7, 0.729);
+}
+
+/* 如果你 icon 是圖片：控制大小 */
+.logo-icon img{
+  width: 70px;;
+  height: 70px;
+  margin-top: 10px;
+  display: block;
+}
+.logo-link:hover .logo-icon img{
+  filter: brightness(0) saturate(100%)
+          invert(63%) sepia(92%) saturate(450%)
+          hue-rotate(35deg) brightness(95%) contrast(90%);}
+
+/* 中間 nav 置中 */
+header nav{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* nav 清單 */
+header ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+/* nav pills：統一高度 + 字級不要太大 */
+header ul a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: whitesmoke;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+
+  background-color: transparent;                 /* ✅ 改：不要實心 */
+  border: 2px solid rgba(255,255,255,0.8);       /* ✅ 加：白色描邊 */
+  transition: bacground .2s ease, transform .2s ease;  /* ✅ 加：滑順 */
+}
+
+
+header ul a:hover{
+  color: whitesmoke;
+
+  background-color: rgba(175, 221, 7, 0.729);   /* 🟢 貓眼綠內亮 */
+  border-color: rgba(28, 214, 11, 0.243);        /* 🟢 邊框發綠 */
+
+  box-shadow:
+    0 0 6px rgba(140, 255, 90, 0.418),
+    inset 0 0 6px rgba(255, 255, 255, 0.25);     /* 🟢 貓眼光感 */
+  transform: translateY(-1px);
+}
+
+/* Login：跟 nav 同高度、同圓角 */
+header .cta-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 30px;
+  border-radius: 999px;
+  color: rgb(255, 255, 255);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  background-color: #376d049f;
+  border: 2px solid rgba(24, 69, 37, 0.997);       /* ✅ 加：白色描邊 */
+  transition: bacground .2s ease, transform .2s ease;  /* ✅ 加：滑順 */ 
+}
+
+header .cta-button:hover{
+  background: #b3d702c8;
+  color: rgb(7, 34, 1);
+  transform: translateY(-3px);
+}
+
+/*主視覺設定*/
+main{
+    position: relative;
+    color: whitesmoke;
+    line-height: 16px;
+    width: 1280px;
+    margin: 0 auto;
+    height: 532px;
+    padding-top:250px;
+    padding-right:50px;;
+    background-image: url(main\ image.png);
+    background-size: cover;
+}
+main h1{
+    text-align: right;
+    font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;
+    font-size: 100px;
+    padding-bottom: 50px;
+}
+main h2{
+    text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:30px;
+    padding-bottom: px;
+}
+
+main h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    max-width: 530px;   
+    margin-left: auto;  
+    text-align: left;  
+}
+/* More 按鈕：固定在 main 右下 */
+.main-more-btn{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;;
+  position: absolute;
+  right: 70px;          /* ✅ 右邊距離，可微調 */
+  bottom: 200px;        /* ✅ 距離底部，可微調 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.92);
+  color: #111;
+   gap: 10px; 
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.main-more-btn:hover{
+  transform: translateY(-2px);
+  color: #000000;
+  background: #9ab803c8;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.32);
+}
+.main-more-btn img{
+  width: 30px;          /* 箭頭大小，可微調 */
+  height: 30px;
+  padding-top:8px;
+  display: block;       /* ✅ 關鍵：移除 inline baseline 問題 */
+}
+
+
+h2{
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*小卡設定*/
+.card{
+    width: 346px;
+    border-radius: 34px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    display: flex;              
+    flex-direction: column;     
+}
+
+.card_title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top:24px;
+    font-size: 36px;  
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.card-image{
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-cta{
+    width: 100%;                
+    margin-top: auto;           
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card-cta.can{
+  background-color: #cdab05;
+}
+
+.card-cta.pupu{
+  background-color: #6d7b66;
+}
+
+.card-cta.toy{
+  background-color: #b5652a;
+}
+
+
+.card-cta:hover{
+  background: #9ab803c8;
+  color:#000000c8;
+}
+
+.card-content{
+    padding: 0px 20px 20px 20px;
+    flex: 1;              
+}
+
+
+
+.card-content p{
+    line-height: 150%;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: center; 
+}
+
+.card-intro{
+    font-size: 20px;   
+    line-height: 1.5;  
+}
+
+/*All support按鈕設定*/
+.all-support-bar{
+    width: 100%;
+    max-width: 1280px;
+    margin: 40px 0;
+    transform: translateX(-3px);
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.all-support-bar:hover{
+  background: #9ab803ee;
+   border: 3px solid rgba(7, 67, 2, 0.712);
+  transform: translateY(-1px);
+}
+
+
+.all-support-text{
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 30px;
+}
+
+
+/*MEOW MEOW橫幅小卡設定*/
+.meow{
+    position: relative;
+    width: 1280px;
+    height: 500px;
+    margin: 0px 0px;
+    background-image: url(LOVEMEHUMAN.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.meow-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    color: white;                
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-text-stroke:4px black; 
+}
+
+.meow-text.left{
+    left: 40px;
+    bottom: 40px;
+}
+
+.meow-text.right{
+    right: 40px;
+    bottom: 40px;
+    font-size: 80px;
+}
+
+/* ===== AJI Footer Card ===== */
+.aji-footer-card{
+  max-width: 1280px;
+  margin: 40px auto 0;
+  padding: 0 0 40px;
+}
+
+.aji-footer-card-inner{
+  background: #8f8a82;
+ 
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr 2.2fr 1.4fr; /* 左品牌 / 中links / contact / 右圖 */
+  gap: 30px;
+  padding: 26px;
+}
+
+/* Brand */
+.aji-footer-card-logo{
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0PX;
+}
+
+.aji-footer-card-logo img{
+  width: 60px;
+  height:50px;
+  display: block;
+  filter: brightness(0); /* 變黑 */
+}
+
+/* About Us（放在品牌下面） */
+.aji-footer-brand-links{
+  list-style: none;
+  margin-left: 62px;
+  padding: 0;
+  gap: 70px;
+}
+
+.aji-footer-brand-links li{
+  margin-bottom: 10px;
+}
+
+.aji-footer-brand-links a{
+  color: #1a1a1a;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.aji-footer-brand-links a:hover{
+  color: #9ab803ee;
+}
+
+/* For Meow */
+.aji-footer-card-links{
+  gap: 70px;
+  margin-top: 66px;
+  margin-left: 0px; /* ✅ 修正你原本 0pz */
+}
+
+.aji-footer-card-links ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aji-footer-card-links li{
+  margin-bottom: 10px;
+}
+
+.aji-footer-card-links a{
+  color: #1a1a1a;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.aji-footer-card-links a:hover{
+  color: #9ab803ee;
+}
+
+/* Contact */
+.aji-footer-card-contact{
+  color: #1a1a1a;
+  font-size: 23px;
+  line-height: 1.3;
+  margin-top: 40px;
+  margin-left: -50PX;
+}
+
+.aji-footer-card-title{
+  font-weight: 800;
+}
+
+/* Image */
+.aji-footer-card-image img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin-top: 0PX;
+  margin-bottom: 0PX;
+    margin-left: -25PX;
+}
+
+/* Bottom bar */
+.aji-footer-bottom{
+  background: #0f0f0f;
+  color: #d0d0d0;
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 18px;
+  margin-top: 0;
+  border-radius: 0 0 22px 22px;
+}
+
+/*頁尾設定*/
+
+footer{
+    font-size: 25px;
+    width: 100%;
+    text-align: left;
+    padding: 30px;
+    color: rgb(201, 201, 201);
+}
